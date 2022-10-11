@@ -5,5 +5,7 @@ object Constants {
     const val END_CATEGORY_POINT = "categories.php"
     const val FOOD_CATEGORY = "food_category"
     const val END_POINT_MEAL = "filter.php"
+    const val END_POINT_RECIPE = "lookup.php"
     const val MY_CATEGORY = "my_category"
+    const val TABLE_NAME = "recipe_table"
 }

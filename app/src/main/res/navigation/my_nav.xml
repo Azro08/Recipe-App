@@ -22,5 +22,13 @@
         <argument
             android:name="my_category"
             app:argType="string" />
+        <action
+            android:id="@+id/nav_to_rec"
+            app:destination="@id/recipeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.azrosk.recipeapp.ui.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" />
 </navigation>

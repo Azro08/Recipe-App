@@ -1,6 +1,7 @@
 package com.azrosk.recipeapp.ui
 
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +25,7 @@ class CategoryFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: CategoryViewModel by viewModels()
     private var adapter : CategoryAdapter?=null
-    private var categoryList = ArrayList<Category>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,12 +40,7 @@ class CategoryFragment : Fragment() {
 
     private fun loadCategories() {
         viewModel.responseCategory.observe(requireActivity()){ categories ->
-            categoryList.clear()
-            for (i in categories.categories){
-                categoryList.add(i)
-            }
-            Log.d("mysize", categoryList.size.toString())
-            adapter = CategoryAdapter(categoryList, ({
+            adapter = CategoryAdapter(categories.categories, ({
                 findNavController().navigate(R.id.nav_to_meals, bundleOf(Constants.MY_CATEGORY to it.strCategory))
             }))
             binding.rvCategories.layoutManager = LinearLayoutManager(requireContext())

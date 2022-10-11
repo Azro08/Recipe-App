@@ -2,6 +2,7 @@ package com.azrosk.recipeapp.di
 
 import com.azrosk.recipeapp.api.ApiCategoryService
 import com.azrosk.recipeapp.api.ApiMealService
+import com.azrosk.recipeapp.api.ApiRecipeService
 import com.azrosk.recipeapp.helper.Constants
 import dagger.Module
 import dagger.Provides
@@ -9,6 +10,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import javax.inject.Singleton
 
 @Module
@@ -36,5 +38,14 @@ object AppModule {
             .build()
             .create(ApiMealService::class.java)
 
+
+    @Singleton
+    @Provides
+    fun provideRetrofitRecipeInstance(BASE_URL: String) : ApiRecipeService =
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ApiRecipeService::class.java)
 
 }

@@ -1,6 +1,7 @@
 package com.azrosk.recipeapp.adapter
 
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,7 +11,7 @@ import com.azrosk.recipeapp.utilities.GlideLoader
 
 class CategoryAdapter (
     private val categoryList : List<Category>,
-    var listener:(category : Category)  -> Unit) : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
+    private var listener:(category : Category)  -> Unit) : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
 
     class MyViewHolder(listener:(category:Category) ->Unit,
                        var binding : CategoryHolderBinding) : RecyclerView.ViewHolder(binding.root){
@@ -19,6 +20,7 @@ class CategoryAdapter (
 
         fun bind(myCategory: Category){
             GlideLoader(context).loadImage(Uri.parse(myCategory.strCategoryThumb), binding.ivCategory)
+            Log.d("my_path", myCategory.strCategoryThumb)
             binding.tvCategory.text = myCategory.strCategory
             binding.tvCategoryDes.text = myCategory.strCategoryDescription
             category = myCategory

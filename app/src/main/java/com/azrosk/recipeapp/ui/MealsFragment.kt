@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.azrosk.recipeapp.R
@@ -26,7 +28,6 @@ class MealsFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: MealsViewModel by viewModels()
     private var adapter : MealsAdapter?=null
-    private var mealsList = ArrayList<Meal>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,13 +45,8 @@ class MealsFragment : Fragment() {
     private fun getMeals(category : String) {
         viewModel.getMeals(category)
         viewModel.responseMeals.observe(requireActivity()){ myMeal ->
-            mealsList.clear()
-            for (i in myMeal.meals){
-                mealsList.add(i)
-            }
-//            Log.d("mysize", mealsList.size.toString())
-            adapter = MealsAdapter(mealsList, ({
-                TODO()
+            adapter = MealsAdapter(myMeal.meals, ({
+                findNavController().navigate(R.id.nav_to_rec, bundleOf("meal_id" to it.idMeal))
             }))
             binding.rvMeals.layoutManager = GridLayoutManager(requireContext(), 2)
             binding.rvMeals.setHasFixedSize(true)

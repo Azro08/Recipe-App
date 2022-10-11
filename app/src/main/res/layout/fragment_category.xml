@@ -14,7 +14,7 @@
         android:layout_marginTop="4dp"
         android:text="Pick a category"
         android:textColor="@color/dark_green"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,4 +28,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:layout_editor_absoluteX="1dp" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

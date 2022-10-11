@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/drawable/category_holder_bgnd.xml" value="0.1975" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.1975" />
+        <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/drawable/ic_fav.xml" value="0.1975" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/drawable/ic_open_category.xml" value="0.1975" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/drawable/meals_holder_bgnd.xml" value="0.1975" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout-night/activity_main.xml" value="0.25" />
@@ -12,10 +13,12 @@
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout-notnight/category_holder.xml" value="0.25" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/category_holder.xml" value="0.291970802919708" />
-        <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/fragment_category.xml" value="0.25" />
+        <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/fragment_category.xml" value="0.2" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/fragment_meals.xml" value="0.152" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/fragment_meals2.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/fragment_recipe.xml" value="0.2" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/meal_holder.xml" value="0.25" />
+        <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/layout/recipe_holder.xml" value="0.152" />
         <entry key="..\:/Users/Azro_Sk/AndroidStudioProjects/RecipeApp/app/src/main/res/xml/network_security_config.xml" value="0.10989583333333333" />
       </map>
     </option>
